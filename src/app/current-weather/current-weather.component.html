@@ -2,7 +2,7 @@
     <div *ngIf="current.city">
     
     <span>{{current.city}}, {{current.country}}</span><br />
-    <span>{{current.date | date: 'fullDate'}}</span>
+    <span>{{current.date | date: 'fullDate'}} </span>
 </div>
 <div *ngIf="current.image">
     <img [src]="current.image" />

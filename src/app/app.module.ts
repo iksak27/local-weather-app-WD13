@@ -13,6 +13,8 @@ import { MatInputModule } from '@angular/material/input'
 import { MatCardModule } from '@angular/material/card'
 import { MatIconModule } from '@angular/material/icon'
 import { MatFormFieldModule } from '@angular/material/form-field'
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,8 +32,7 @@ import { MatFormFieldModule } from '@angular/material/form-field'
     MatInputModule,
     MatCardModule,
     MatIconModule,
-    MatFormFieldModule,
-
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
