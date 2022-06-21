@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
-import { debounceTime } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 @Component({
   selector: 'app-city-search',
@@ -8,6 +8,7 @@ import { debounceTime } from 'rxjs';
   styleUrls: ['./city-search.component.css']
 })
 export class CitySearchComponent implements OnInit {
+  
   @Output() searchEvent = new EventEmitter<string>()
 
   search = new FormControl('', [Validators.minLength(3)])
@@ -19,8 +20,7 @@ export class CitySearchComponent implements OnInit {
     .subscribe(data => {
       if(!this.search.invalid){
         this.searchEvent.emit(data)
-    }
+      }
     })
-  }
-
+    }
 }
