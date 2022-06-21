@@ -20,7 +20,7 @@ export class CitySearchComponent implements OnInit {
     .pipe(debounceTime(1000))
     .subscribe(data => {
       if(!this.search.invalid){
-        this.searchEvent.emit(data)
+        this.searchEvent.emit(data as string)
       }
     })
   }
